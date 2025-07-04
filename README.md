@@ -1,41 +1,39 @@
-# SQL--assignement# 🎤 Music World SQL Project
+# Music World SQL Project
 
-Welcome to my first SQL project — where **music meets data**! 🎶  
-I built this for a class assignment, but it turned into a fun way to explore artists, cities, and countries through a simple relational database.
-
----
-
-## 🌍 What's Inside
-
-This mini music database includes:
-
-- 🌐 **Countries** and their capitals  
-- 🏙️ **Cities**  
-- 🎤 **Artists** and their hometowns  
-
-*(I removed the Genres table to keep things simple.)*
+Welcome to my first SQL project — where music meets data.  
+I created this as part of a class assignment, and it turned into a fun way to explore how artists, cities, and countries can be connected through a relational database.
 
 ---
 
-## 📚 What I Learned
+## What's Inside
 
-- Creating tables with foreign key relationships  
-- Inserting and updating data  
-- Writing SQL queries with `SELECT`, `JOIN`, and filters  
-- Fixing data issues (like the “Micheal” typo 😅)
+This project contains a simple SQL database with:
+
+- Countries and their capitals  
+- Cities around the world  
+- Artists and their hometowns  
+
+(Note: A Genres table was originally included but later removed to keep things simple.)
 
 ---
 
-## 🛠️ How to Use
+## What I Learned
 
-1. Run `01_table_creation.sql` to create the tables  
-2. Load sample data with `02_data_insertion.sql`  
-3. Use the rest of the files to update and explore  
-4. Try adding your favorite artist or city!
+- How to create tables with foreign key relationships  
+- How to insert, update, and manage data  
+- Writing SQL queries using SELECT, JOIN, and WHERE  
+- Fixing data issues (e.g., typos like "Micheal")
+
+---
+
+## How to Use
+
+1. Run `01_table_creation.sql` to set up the database schema  
+2. Use `02_data_insertion.sql` to load sample data  
+3. Continue with the remaining SQL files in order  
+4. You can also customize the database by adding your own entries
 
 ```sql
--- Example: Add your city!
+-- Example: Add your own city
 INSERT INTO City (Id, City_name, Country_id)
 VALUES (7, 'Your City', NULL);
--1
-![SQL Assignement](https://github.com/user-attachments/assets/3a805773-9223-43bc-8d54-5e7164b97b4d)
