@@ -1,34 +1,36 @@
-# Music World SQL Project
+# Relational SQL Practice Project
 
 ![Database Schema Diagram](assets/database_schema.png)
-![SQL Assignement](https://github.com/user-attachments/assets/5cbf5a6c-1f69-413f-ab2c-527fb8e68308)
+![SQL Assignement](https://github.com/user-attachments/assets/9dde2003-663f-4de0-9a50-fc5fe19b65ba)
 
-*A visual overview of the tables and their relationships*
-
----
-
-## What's Inside
-
-This project includes a simple relational SQL database with:
-
-- **Countries**  
-  Columns: `id`, `name`, `capital`, `code`
-
-- **Cities**  
-  Columns: `id`, `name`, `country_id`  
-  → Foreign key referencing `Countries.id`
-
-- **Artists**  
-  Columns: `id`, `name`, `city_id`, `contact_address`  
-  → Foreign key referencing `Cities.id`
-
-- ~~Genres~~ (removed in Question 6 to simplify the model)
+*A visual overview of the tables and relationships*
 
 ---
 
-## How to Create This Diagram (If You Don’t Have One Yet)
+## What's Inside?
 
-You can generate a database diagram using [DBML](https://dbml.dbdiagram.io/home) (Database Markup Language):
+This project features a simple, beginner-friendly relational SQL database designed to practice:
+
+- Table creation with primary and foreign key relationships  
+- Query writing (SELECT, JOIN, WHERE, etc.)  
+- Data cleaning and updates  
+- Schema design visualization
+
+### Database Structure:
+
+- **Countries** (`Country_id`, `Country_name`, `Country_Capital`, `Country_code`)
+- **Cities** (`Id`, `City_name`, `Country_id`) → references `Countries`
+- **People** (`Id`, `Name`, `City_id`, `Contact_Address`) → references `Cities`
+
+> Note: A "Genres" table was originally part of the concept but has been removed for simplicity.
+
+---
+
+## How to Create This Diagram (If You Don't Have One)
+
+You can use [DBML](https://dbdiagram.io/) to generate your own schema diagram.
+
+### Example DBML Code:
 
 ```dbml
 Table Country {
@@ -44,10 +46,11 @@ Table City {
   Country_id integer [ref: > Country.Country_id]
 }
 
-Table Artist {
-  Artist_id integer [primary key]
-  Artist_name varchar(128)
+Table Person {
+  Id integer [primary key]
+  Name varchar(128)
   City_id integer [ref: > City.Id]
   Contact_Address text
 }
+
 
