@@ -1,42 +1,53 @@
 # Music World SQL Project
 
-This project combines music and data through a simple relational SQL database.  
-It explores how countries, cities, and artists can be connected and queried using SQL.
+![Database Schema Diagram](assets/database_schema.png)
+![SQL Assignement](https://github.com/user-attachments/assets/bb3586e6-668a-490b-a46d-1a2d0a2395a2)
+
+*A visual overview of the tables and their relationships*
 
 ---
 
 ## What's Inside
 
-The database includes:
+This project includes a simple relational SQL database with:
 
-- Countries and their capitals  
-- Cities around the world  
-- Artists and their hometowns  
+- **Countries**  
+  Columns: `id`, `name`, `capital`, `code`
 
-(Note: A Genres table was initially included but later removed to simplify the structure.)
+- **Cities**  
+  Columns: `id`, `name`, `country_id`  
+  → Foreign key referencing `Countries.id`
 
----
+- **Artists**  
+  Columns: `id`, `name`, `city_id`, `contact_address`  
+  → Foreign key referencing `Cities.id`
 
-## What I Learned
-
-- Creating tables with foreign key relationships  
-- Inserting, updating, and managing structured data  
-- Writing queries using SELECT, JOIN, and WHERE clauses  
-- Identifying and fixing data issues
+- ~~Genres~~ (removed in Question 6 to simplify the model)
 
 ---
 
-## How to Use
+## How to Create This Diagram (If You Don’t Have One Yet)
 
-1. Run `01_table_creation.sql` to create all tables  
-2. Load sample data with `02_data_insertion.sql`  
-3. Continue with the remaining SQL files to update and query the data  
-4. Feel free to expand the dataset by adding your own entries
+You can generate a database diagram using [DBML](https://dbml.dbdiagram.io/home) (Database Markup Language):
 
-```sql
--- Example: Add your own city
-INSERT INTO City (Id, City_name, Country_id)
-VALUES (7, 'Your City', NULL);
-![Query Result](![SQL Assignement](https://github.com/user-attachments/assets/65ed4c8e-1b67-4f95-bd38-73e782cdc455)
-)
+```dbml
+Table Country {
+  Country_id integer [primary key]
+  Country_name varchar [not null]
+  Country_Capital varchar
+  Country_code varchar(8)
+}
+
+Table City {
+  Id integer [primary key]
+  City_name varchar(128)
+  Country_id integer [ref: > Country.Country_id]
+}
+
+Table Artist {
+  Artist_id integer [primary key]
+  Artist_name varchar(128)
+  City_id integer [ref: > City.Id]
+  Contact_Address text
+}
 
