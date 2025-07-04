@@ -1,7 +1,7 @@
 # Music World SQL Project
 
 ![Database Schema Diagram](assets/database_schema.png)
-![SQL Assignement](https://github.com/user-attachments/assets/bb3586e6-668a-490b-a46d-1a2d0a2395a2)
+![SQL Assignement](https://github.com/user-attachments/assets/5cbf5a6c-1f69-413f-ab2c-527fb8e68308)
 
 *A visual overview of the tables and their relationships*
 
