@@ -37,4 +37,6 @@ The database includes:
 -- Example: Add your own city
 INSERT INTO City (Id, City_name, Country_id)
 VALUES (7, 'Your City', NULL);
+![Query Result](![SQL Assignement](https://github.com/user-attachments/assets/65ed4c8e-1b67-4f95-bd38-73e782cdc455)
+)
 
