@@ -38,4 +38,3 @@ This mini music database includes:
 INSERT INTO City (Id, City_name, Country_id)
 VALUES (7, 'Your City', NULL);
 -1
-![SQL Assignement](https://github.com/user-attachments/assets/3a805773-9223-43bc-8d54-5e7164b97b4d)
